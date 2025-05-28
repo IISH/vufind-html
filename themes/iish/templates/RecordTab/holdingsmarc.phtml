@@ -1,0 +1,125 @@
+<? $this->headTitle($this->translate('Holdings') . ': ' . $this->driver->getBreadcrumb()); ?>
+
+<? $holdings = $this->driver->getHoldings(); if (!empty($holdings)): ?>
+  <? $formats = $this->driver->getFormats(); $format = strtolower($formats[0]); ?>
+  <? $hasOnlineContent = $this->driver->getDownloadable() && ($format === 'books and brochures'); ?>
+
+  <h4><?=$this->transEsc('Holding')?></h4>
+
+  <div class="holdings-container no-children <?=$hasOnlineContent ? 'online-content-available' : ''?>">
+    <? foreach ($holdings as $counter => $holding): ?>
+      <div class="holding">
+        <div class="info">
+          <div class="callnumber">
+            <?=$this->escapeHtml($holding['c'])?>
+          </div>
+
+          <? if (isset($holding['p'])): ?>
+            <div class="digital loading hidden-print"
+                 data-record="<?=$this->escapeHtml($this->driver->getUniqueId())?>"
+                 data-item="<?=$this->escapeHtml($holding['p'])?>">
+              <i class="fa fa-spinner fa-spin"></i>
+            </div>
+          <? endif; ?>
+
+          <? $reservationFormats = ($format === 'books and brochures') || ($format === 'serials'); ?>
+          <? $reservationHoldings = (strpos($holding['j'], 'BG T') === 0) || (strpos($holding['j'], 'BG V') === 0) ||
+              (strpos($holding['j'], 'BG GC') === 0) || (strpos($holding['j'], 'BG GB') === 0) ||
+              (strpos($holding['j'], 'BG PK') === 0) || (strpos($holding['j'], 'BG PG') === 0);?>
+
+            <? if (strpos($holding['j'], 'BG V') === 0): ?><br/><?=$this->transEsc('no_audio')?><? else: ?>
+          <div class="state hidden-print"
+               data-label="<?=$this->escapeHtmlAttr($this->truncate(preg_replace('/[\'"]/', '`',
+                 $this->driver->getShortTitle()), 40))?> - <?=$this->escapeHtmlAttr($holding['j'])?>"
+               data-pid="<?=$this->escapeHtmlAttr($this->driver->getIsShownAt())?>"
+               data-signature="<?=$this->escapeHtmlAttr($holding['j'])?>"
+               data-show-reservation="<?=var_export($reservationFormats || $reservationHoldings)?>"
+               data-show-reproduction="<?=var_export(($format !== 'articles') && ($format !== 'other'))?>"
+               data-show-permission="false">
+          </div><? endif; ?>
+
+        </div>
+
+        <? if (isset($holding['note'])): ?>
+          <div class="note">
+            <?=$this->escapeHtml($holding['note'])?>
+          </div>
+        <? endif; ?>
+      </div>
+    <? endforeach; ?>
+  </div>
+<? endif; ?>
+
+<? if ($this->usertags()->getMode() !== 'disabled'): ?>
+  <? $tagList = $this->driver->getTags(); ?>
+  <div class="tags">
+    <h4><?=$this->transEsc('Tags')?></h4>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <span class="pull-right hidden-print">
+          <i class="fa fa-plus"></i> <a id="tagRecord" class="modal-link" href="<?=$this->recordLink()->getActionUrl($this->driver, 'AddTag')?>" title="<?=$this->transEsc('Add Tag')?>"><?=$this->transEsc('Add Tag')?></a>
+        </span>
+
+        <div id="tagList">
+          <? if (count($tagList) > 0): ?>
+            <? $i = 0; foreach ($tagList as $tag): ?><?=($i++ == 0)?'':', '?><a href="<?=$this->url('tag-home')?>?lookfor=<?=urlencode($tag->tag)?>"><?=$this->escapeHtml($tag->tag)?></a> (<?=$this->escapeHtml($tag->cnt)?>)<? endforeach; ?>
+          <? else: ?>
+            <?=$this->transEsc('No Tags')?>, <?=$this->transEsc('Be the first to tag this record')?>!
+          <? endif; ?>
+        </div>
+      </div>
+    </div>
+  </div>
+<? endif; ?>
+
+<?
+$isShownAt = $this->driver->getIsShownAt();
+$imageURL = $this->driver->getImageURL();
+?>
+<? if (!empty($isShownAt) || !empty($imageURL)): ?>
+  <div id="is-shown">
+    <? if (!empty($isShownAt)): ?>
+      <p>
+        <?= $this->transEsc('isShownAt') ?><br/>
+        <a href="https://hdl.handle.net/<?= $isShownAt ?>" target="_blank">
+          https://hdl.handle.net/<?= $isShownAt ?>
+        </a>
+      </p>
+    <? endif; ?>
+
+    <? if (!empty($imageURL)): ?>
+      <p>
+        <?= $this->transEsc('isShownBy') ?><br/>
+        <a href="<?= $imageURL ?>" target="_blank">
+          <?= $imageURL ?>
+        </a>
+      </p>
+    <? endif; ?>
+  </div>
+<? endif; ?>
+
+<?
+$copyrightA = $this->driver->getCopyrightA();
+$isShownBy = $this->driver->getIsShownBy();
+?>
+<? if (!empty($copyrightA) || ($copyrightA != 'Public Domain.') && !empty($isShownBy)): ?>
+  <div id="copyright">
+    <h4><?=$this->transEsc('copyright.use')?></h4>
+
+    <p>
+      <a href="<?=$this->translate('copyright.consult.href')?>" target="_blank">
+        <?=$this->transEsc('copyright.consult')?>
+      </a>
+    </p>
+
+    <? $copyrightB = $this->driver->getCopyrightB(); if (empty($copyrightB)): ?>
+      <p><?=$this->transEsc('copyright.unknown')?></p>
+    <? else: ?>
+      <p><?=$this->transEsc('copyright.known')?></p>
+    <? endif; ?>
+  </div>
+<? endif; ?>
+
+<?=$this->record($this->driver)->getPreviews()?>
+

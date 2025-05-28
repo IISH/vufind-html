@@ -1,0 +1,237 @@
+<?
+// File: vufind/themes/iish/templates/iish/about.phtml
+$this->headTitle($this->translate('About')); ?>
+
+<h2><?= $this->transEsc('About') ?></h2>
+
+<? if ($this->layout()->userLang === 'nl'): ?>
+	<p>
+		<b>zoeken.iisg.amsterdam</b> is de catalogus van het <a
+				href="https://iisg.amsterdam/nl">Internationaal Instituut voor Sociale
+			Geschiedenis (IISG)</a>,
+		het <a href="https://neha.nl/">Nederlands Economisch Historisch Archief
+			(NEHA)</a> en <a href="https://www.beeldengeluid.nl/collectie">Perscollectie (NIBG)</a>.<br/>
+		Voor praktische informatie en antwoorden op veel gestelde vragen met betrekking tot het raadplegen van deze
+		collecties zie <a href="https://iisg.amsterdam/nl/collecties">Collecties</a><br/>
+		De taalwissel heeft betrekking op de weergave van de labels in de interface.
+		De taal van de data zelf wijzigt niet.
+	</p>
+
+	<h3>Nadere toelichting</h3>
+
+	<p>
+		<b>
+			<a href="<?= $this->url('search-results') . '?' .
+			http_build_query([
+				'type' => 'AllFields',
+				'filter[]' => 'format:"Archives"',
+			]); ?>">Archieven</a></b>
+		– beschrijvingen en inventarissen van alle archiefcollecties van het IISG,
+		NEHA en Perscollectie (NIBG). <br/>
+		De Nederlandse archieven zijn voorzien van een korte beschrijving in het
+		Nederlands, de buitenlandse
+		archieven hebben alleen een korte beschrijving in het Engels.<br/>
+		Van ruim 1500 archieven is eveneens een inventaris beschikbaar. De taal van
+		de inventaris hangt af van het
+		land van herkomst van het archief en kan Nederlands, Engels, Duits, Frans of
+		Spaans zijn.<br/>
+		De inhoud van <a href="<?= $this->url('search-results') . '?' .
+		http_build_query([
+			'type' => 'AllFields',
+			'filter' => ['format:"Archives"', 'downloadable:true'],
+		]); ?>">
+			meer dan 450 archiefcollecties</a> zijn via deze catalogus online
+		beschikbaar.<br\>
+		Meer informatie over de archieven:
+		<a href="https://iisg.amsterdam/nl/collecties/archieven">iisg.amsterdam/nl/collecties/archieven</a>.
+	</p>
+
+	<!-- <p>
+    <b>
+      <a href="<?=
+	$this->url('search-results') . '?' .
+	http_build_query([
+		'type' => 'AllFields',
+		'filter[]' => 'format:"Articles"',
+	]); ?>">Artikelen</a></b>
+    - van de volgende tijdschriften zijn online te raadplegen:<br/>
+  <ul>
+    <li>International Review of Social History, 1936-1939</li>
+    <li>Bulletin of the International Institute for Social History, 1937-1955
+    </li>
+    <li>International Review of Social History, 1956-2015</li>
+    <li>Economisch-Historisch Jaarboek, 1915-1970</li>
+    <li>Economisch- en Sociaal-Historisch Jaarboek, 1970-1993</li>
+    <li>NEHA-Bulletin. Orgaan ten behoeve van de economische geschiedenis in
+      Nederland, 1987-2003
+    </li>
+    <li>Jaarboek voor de Geschiedenis van Bedrijf en Techniek, 1984-1993</li>
+    <li>Economic and Social History in the Netherlands, 1989-1996</li>
+    <li>NEHA-Jaarboek voor economische, bedrijfs- en techniekgeschiedenis,
+      1994-2003
+    </li>
+  </ul>
+  </p> -->
+
+	<p>
+		<b><a href="<?= $this->url('search-results') . '?' .
+			http_build_query([
+				'type' => 'AllFields',
+				'filter[]' => 'format:"Books and brochures"',
+			]); ?>">Boeken
+				en brochures</a></b> – gegevens van alle boeken en brochures in de
+		bibliotheek van het IISG, NEHA en Perscollectie (NIBG).
+	</p>
+
+	<p>
+		<b><a href="<?= $this->url('search-results') . '?' .
+			http_build_query([
+				'type' => 'AllFields',
+				'filter[]' => 'format:"Serials"',
+			]); ?>">Periodieken</a></b>
+		– beschrijvingen van kranten, tijdschriften, jaarboeken en jaarverslagen in
+		de bibliotheek van het IISG, NEHA en Perscollectie (NIBG).
+	</p>
+
+	<p>
+		<b><a href="<?= $this->url('search-results') . '?' .
+			http_build_query([
+				'type' => 'AllFields',
+				'filter[]' => 'format:"Visual documents"',
+			]); ?>">Beeldmateriaal</a></b>
+		– de beeldcollectie omvat onder meer foto's, negatieven en tekeningen, een
+		van de grootste collecties affiches in Nederland en enkele honderden
+		vaandels. Daarnaast omvat
+		de collectie aanzienlijke hoeveelheden film, video's en buttons. Van de
+		beeldcollectie zijn meer dan 275.000 afbeeldingen digitaal beschikbaar.<br/>
+		Een overzicht van de gebruikte trefwoorden vindt u in de <a
+				href="https://iisg.amsterdam/files/2018-01/iish_thesaurus_image_and_sound_collections.pdf">thesauruslijst</a><br/>
+		Meer informatie: <a
+				href="https://iisg.amsterdam/nl/collecties/bladeren/beeld-geluid">iisg.amsterdam/nl/collecties/bladeren/beeld-geluid</a>.
+	</p>
+
+	<p>
+		<b><a href="<?= $this->url('search-results') . '?' .
+			http_build_query([
+				'type' => 'AllFields',
+				'filter[]' => 'format:"Music and sound"',
+			]); ?>">Muziek en geluid</a></b>
+		- gegevens van de collectie strijd- en protestliederen; historisch
+		geluidsmateriaal, zowel documentair uitgegeven als originele opnames.
+		Onder andere redevoeringen voorlieden, congressen en bijeenkomsten,
+		programma's rond voorlieden en gebeurtenissen, interview- en oral history
+		projecten rond onderzoeken en
+		publicaties.
+	</p>
+<? else: ?>
+	<p>
+		<b>search.iisg.amsterdam</b> is a search platform for the collections of the
+		<a
+				href="https://iisg.amsterdam">International Institute of Social History
+			(IISH)</a>, <a href="https://neha.nl/">Netherlands Economic History
+			Archive</a> (NEHA), and <a href="https://www.beeldengeluid.nl/collectie">Perscollectie (NIBG)</a>.<br/>
+		For practical information and answers to FAQs on accessing the collections
+		please see <a
+				href="https://iisg.amsterdam/en/collections">Collections</a>.<br/>
+		The language switch applies to the labels on the website. The language of
+		the data itself does not change.
+	</p>
+
+	<h3>Additional information</h3>
+
+	<p>
+		<b><a href="<?= $this->url('search-results') . '?' .
+			http_build_query([
+				'type' => 'AllFields',
+				'filter[]' => 'format:"Archives"',
+			]); ?>">Archives</a></b>
+		– descriptions and inventories to archival collections of IISH, NEHA and     Perscollectie (NIBG).<br/>
+		For Dutch archives a short description in Dutch is available, for all other
+		archives the short description
+		is in English. An inventory is available for over 1500 archives and can be
+		in
+		Dutch, English, German, French or Spanish, depending on the archives country
+		of origin.<br/>
+		The content of <a href="<?= $this->url('search-results') . '?' .
+		http_build_query([
+			'type' => 'AllFields',
+			'filter' => ['format:"Archives"', 'downloadable:true'],
+		]); ?>">
+			over 450 collections</a> is online available through this catalogue.<br/>
+		More information: <a
+				href="https://iisg.amsterdam/en/collections/browsing/archives">iisg.amsterdam/en/collections/browsing/archives</a>.
+	</p>
+
+	<!-- <p>
+    <b><a href="<?=
+	$this->url('search-results') . '?' .
+	http_build_query([
+		'type' => 'AllFields',
+		'filter[]' => 'format:"Articles"',
+	]); ?>">Articles</a></b>
+    - from the following serials are online available:<br/>
+  <ul>
+    <li>International Review of Social History, 1936-1939</li>
+    <li>Bulletin of the International Institute for Social History, 1937-1955
+    </li>
+    <li>International Review of Social History, 1956-2015</li>
+    <li>Economisch-Historisch Jaarboek, 1915-1970</li>
+    <li>Economisch- en Sociaal-Historisch Jaarboek, 1970-1993</li>
+    <li>NEHA-Bulletin. Orgaan ten behoeve van de economische geschiedenis in
+      Nederland, 1987-2003
+    </li>
+    <li>Jaarboek voor de Geschiedenis van Bedrijf en Techniek, 1984-1993</li>
+    <li>Economic and Social History in the Netherlands, 1989-1996</li>
+    <li>NEHA-Jaarboek voor economische, bedrijfs- en techniekgeschiedenis,
+      1994-2003
+    </li>
+  </ul>
+  </p> -->
+
+	<p>
+		<b><a href="<?= $this->url('search-results') . '?' .
+			http_build_query([
+				'type' => 'AllFields',
+				'filter[]' => 'format:"Books and brochures"',
+			]); ?>">Books
+				and brochures</a></b> – contains records of all books and brochures in
+		the library of IISH, NEHA, and Perscollectie (NIBG).
+	</p>
+
+	<p>
+		<b><a href="<?= $this->url('search-results') . '?' .
+			http_build_query([
+				'type' => 'AllFields',
+				'filter[]' => 'format:"Serials"',
+			]); ?>">Serials</a></b>
+		– contains descriptions of all newspapers, journals, yearbooks, and annual
+		reports in the collections of IISH, NEHA, and, Perscollectie (NIBG).
+	</p>
+	<p>
+		<b><a href="<?= $this->url('search-results') . '?' .
+			http_build_query([
+				'type' => 'AllFields',
+				'filter[]' => 'format:"Visual documents"',
+			]); ?>">Visual
+				Documents</a></b> – the image collection
+		held by the IISH includes about photos, negatives, and drawings. The
+		Institute has
+		one of the largest collections of posters in the Netherlands as well as
+		several hundred banners. In addition, the collections
+		include a considerable number of films, videos, and buttons. Over 275,000
+		images are available digitally.<br/>
+		There is a subject index in the <a
+				href="https://iisg.amsterdam/files/2018-01/iish_thesaurus_image_and_sound_collections.pdf">thesaurus</a>.<br/>
+		More information: <a
+				href="https://iisg.amsterdam/en/collections/browsing/image-sound">iisg.amsterdam/en/collections/browsing/image-sound</a>.
+	</p>
+	<p>
+		<b><a href="<?= $this->url('search-results') . '?' .
+			http_build_query([
+				'type' => 'AllFields',
+				'filter[]' => 'format:"Music and sound"',
+			]); ?>">Music and sound</a></b> - songs of struggle and protest; historical
+		recordings, in original and published. Speeches party leaders, congresses
+		and meetings, interviews and oral history projects.
+	</p>
+<? endif ?>

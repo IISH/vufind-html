@@ -1,0 +1,77 @@
+<?
+// Make sure we the Visual Mets stylesheet comes FIRST.
+// It contains Bootstrap 2.x styling, which overrides VuFinds Bootstrap 3.x styling and we don't want that.
+// $this->headLink()->offsetSetStylesheet(10, $this->visualmetsUrl . '/resources/css/themes/iisg/style.css?_=2.1', 'all');
+// Now make use of the css version without the Bootstrap styling
+$this->headLink()->offsetSetStylesheet(10, 'visualmets.css', 'all');
+// And now make sure our main related stylesheet has a lower offset.
+$this->headLink()->offsetSetStylesheet(20, 'compiled.css', 'all');
+// Do the same for the print stylesheet.
+$this->headLink()->offsetSetStylesheet(30, 'print.css', 'print');
+
+$this->headScript()->appendFile('navigation.js');
+
+$this->jsobject()->addProps(array(
+  'url'  => $this->visualmetsUrl,
+  'rows' => $this->visualmetsRows
+));
+$this->headScript()->appendScript($this->jsobject()->getScript('visualMets'));
+$this->headScript()->appendFile('mets2viewer.min.js');
+$this->headScript()->appendFile('visual-mets/' . $this->layout()->userLang . '.lang.js');
+
+$this->headScript()->appendFile('digital.js');
+
+$this->headLink()->appendStylesheet('../vendor/mediaelement/build/mediaelementplayer.css');
+$this->headScript()->appendFile('../vendor/mediaelement/build/mediaelement-and-player.min.js');
+$this->headScript()->appendFile('player.js');
+
+$this->jsTranslations()->addStrings(array(
+  'iiif' => 'digital.iiif',
+  'pdf' => 'digital.pdf',
+  'view' => 'digital.view',
+  'audio' => 'digital.audio',
+  'video' => 'digital.video',
+  'availableReadingRoom' => 'Available Reading Room',
+));
+?>
+
+<div class="row" vocab="http://schema.org/" resource="#record" typeof="<?=$this->driver->getSchemaOrgFormats()?> Product">
+  <div class="visible-print text-center">
+    <? $langClass = ($this->layout()->userLang === 'nl') ? 'nl' : 'en'; ?>
+    <img src="<?=$this->imageLink('IISG-logo-' . $langClass . '.jpg')?>"/>
+  </div>
+
+  <div class="col-sm-12" data-extent="<?=floatval($this->driver->getExtent())?>">
+    <h3 property="name"><?=$this->escapeHtml($this->driver->getShortTitle() . ' ' . $this->driver->getSubtitle() . ' ' . $this->driver->getTitleSection())?></h3>
+
+    <? if ($this->userlist()->getMode() !== 'disabled'): ?>
+      <? /* Display the lists that this record is saved to */ ?>
+      <div class="savedLists hidden alert alert-info" id="savedLists">
+        <strong><?=$this->transEsc("Saved in")?>:</strong>
+      </div>
+    <? endif; ?>
+
+    <?/* Display Main Details (Only if tags are enabled) */?>
+    <? if ($this->usertags()->getMode() !== 'disabled'): ?>
+      <table class="table table-striped" summary="<?=$this->transEsc('Bibliographic Details')?>">
+        <? $tagList = $this->driver->getTags(); ?>
+        <tr>
+          <th><?=$this->transEsc('Tags')?>: </th>
+          <td>
+            <span class="pull-right hidden-print">
+              <i class="fa fa-plus"></i> <a id="tagRecord" class="modal-link" href="<?=$this->recordLink()->getActionUrl($this->driver, 'AddTag')?>" title="<?=$this->transEsc('Add Tag')?>"><?=$this->transEsc('Add Tag')?></a>
+            </span>
+            <div id="tagList">
+              <? if (count($tagList) > 0): ?>
+                <? $i = 0; foreach ($tagList as $tag): ?><?=($i++ == 0)?'':', '?><a href="<?=$this->url('tag-home')?>?lookfor=<?=urlencode($tag->tag)?>"><?=$this->escapeHtml($tag->tag)?></a> (<?=$this->escapeHtml($tag->cnt)?>)<? endforeach; ?>
+              <? else: ?>
+                <?=$this->transEsc('No Tags')?>, <?=$this->transEsc('Be the first to tag this record')?>!
+              <? endif; ?>
+            </div>
+          </td>
+        </tr>
+      </table>
+    <? endif; ?>
+    <?/* End Main Details */?>
+  </div>
+</div>

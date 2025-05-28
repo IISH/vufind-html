@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for languages/ko.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">All files</a> / <a href="index.html">languages</a> ko.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>1/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/1</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+/*!
+ * This is a i18n.locale language object.
+ *
+ * Korean
+ *
+ * @author
+ *   Jalios (Twitter: @Jalios)
+ *   Sascha "SoftCreatR" Greuel
+ *
+ * @see
+ *   mediaelement-i18n.js
+ *
+ * @params
+ *  - exports - CommonJS, window ..
+ */
+export const KO = {
+	"mejs.plural-form": 0,
+&nbsp;
+	// me-shim
+	"mejs.download-file": "파일 다운로드",
+	// "mejs.install-flash": "You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https://get.adobe.com/flashplayer/",
+&nbsp;
+	// mediaelementplayer-feature-contextmenu
+	"mejs.fullscreen-off": "전체화면 해제",
+	"mejs.fullscreen-on": "전체화면 가기",
+	"mejs.download-video": "비디오 다운로드",
+&nbsp;
+	// mediaelementplayer-feature-fullscreen
+	"mejs.fullscreen": "전체화면",
+&nbsp;
+	// mediaelementplayer-feature-jumpforward
+	//"mejs.time-jump-forward": "Jump forward %1 second(s)",
+&nbsp;
+	// mediaelementplayer-feature-loop
+	//"mejs.loop": "Toggle Loop",
+&nbsp;
+	// mediaelementplayer-feature-playpause
+	"mejs.play": "작동",
+	"mejs.pause": "정지",
+&nbsp;
+	// mediaelementplayer-feature-postroll
+	"mejs.close": "종료",
+&nbsp;
+	// mediaelementplayer-feature-progress
+	"mejs.time-slider": "시간 슬라이더",
+	"mejs.time-help-text": "1초 전진하려면 좌/우측 화살표를 사용하시고 10초 전진하려면 위/아래 화살표를 사용하세요.",
+&nbsp;
+	// mediaelementplayer-feature-skipback
+	"mejs.time-skip-back": "%1초 를 뒤로 건너뛰세요",
+&nbsp;
+	// mediaelementplayer-feature-tracks
+	"mejs.captions-subtitles": "캡션/자막",
+	"mejs.none": "없음",
+&nbsp;
+	// mediaelementplayer-feature-volume
+	"mejs.mute-toggle": "음소거 전환",
+	"mejs.volume-help-text": "볼륨을 높이거나 낮추려면 위/아래 화살표를 이용하세요.",
+	"mejs.unmute": "음소거 해제",
+	"mejs.mute": "말 없는",
+	"mejs.volume-slider": "볼륨 슬라이더",
+&nbsp;
+	// mep-player
+	"mejs.video-player": "비디오 플레이어",
+	"mejs.audio-player": "오디오 플레이어"
+&nbsp;
+	// mediaelementplayer-feature-ads
+	//"mejs.ad-skip": "Skip ad",
+	//"mejs.ad-skip-info": "Skip in %1 second(s)",
+&nbsp;
+	// mediaelementplayer-feature-sourcechooser
+	//"mejs.source-chooser": "Source Chooser"
+&nbsp;
+	// mediaelementplayer-feature-stop
+	//"mejs.stop": "Stop"
+&nbsp;
+	//mediaelementplayer-feature-speed
+	//"mejs.speed-rate" : "Speed Rate"
+&nbsp;
+	// mep-tracks
+	// "mejs.afrikaans": "Afrikaans",
+	// "mejs.albanian": "Albanian",
+	// "mejs.arabic": "Arabic",
+	// "mejs.belarusian": "Belarusian",
+	// "mejs.bulgarian": "Bulgarian",
+	// "mejs.catalan": "Catalan",
+	// "mejs.chinese": "Chinese",
+	// "mejs.chinese-simplified": "Chinese (Simplified)",
+	// "mejs.chinese-traditional": "Chinese (Traditional)",
+	// "mejs.croatian": "Croatian",
+	// "mejs.czech": "Czech",
+	// "mejs.danish": "Danish",
+	// "mejs.dutch": "Dutch",
+	// "mejs.english": "English",
+	// "mejs.estonian": "Estonian",
+	// "mejs.filipino": "Filipino",
+	// "mejs.finnish": "Finnish",
+	// "mejs.french": "French",
+	// "mejs.galician": "Galician",
+	// "mejs.german": "German",
+	// "mejs.greek": "Greek",
+	// "mejs.haitian-creole": "Haitian Creole",
+	// "mejs.hebrew": "Hebrew",
+	// "mejs.hindi": "Hindi",
+	// "mejs.hungarian": "Hungarian",
+	// "mejs.icelandic": "Icelandic",
+	// "mejs.indonesian": "Indonesian",
+	// "mejs.irish": "Irish",
+	// "mejs.italian": "Italian",
+	// "mejs.japanese": "Japanese",
+	// "mejs.korean": "Korean",
+	// "mejs.latvian": "Latvian",
+	// "mejs.lithuanian": "Lithuanian",
+	// "mejs.macedonian": "Macedonian",
+	// "mejs.malay": "Malay",
+	// "mejs.maltese": "Maltese",
+	// "mejs.norwegian": "Norwegian",
+	// "mejs.persian": "Persian",
+	// "mejs.polish": "Polish",
+	// "mejs.portuguese": "Portuguese",
+	// "mejs.romanian": "Romanian",
+	// "mejs.russian": "Russian",
+	// "mejs.serbian": "Serbian",
+	// "mejs.slovak": "Slovak",
+	// "mejs.slovenian": "Slovenian",
+	// "mejs.spanish": "Spanish",
+	// "mejs.swahili": "Swahili",
+	// "mejs.swedish": "Swedish",
+	// "mejs.tagalog": "Tagalog",
+	// "mejs.thai": "Thai",
+	// "mejs.turkish": "Turkish",
+	// "mejs.ukrainian": "Ukrainian",
+	// "mejs.vietnamese": "Vietnamese",
+	// "mejs.welsh": "Welsh",
+	// "mejs.yiddish": "Yiddish"
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Jan 05 2017 13:55:43 GMT-0500 (EST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

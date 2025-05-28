@@ -1,0 +1,103 @@
+{
+  "_args": [
+    [
+      "jquery-slimscroll@^1.3.8",
+      "/data/atlassian/bamboo/xml-data/build-dir/VUFIND-PRODUCTION-JOB1/vufind-2.3.1"
+    ]
+  ],
+  "_from": "jquery-slimscroll@>=1.3.8 <2.0.0",
+  "_id": "jquery-slimscroll@1.3.8",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/jquery-slimscroll",
+  "_nodeVersion": "4.2.2",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/jquery-slimscroll-1.3.8.tgz_1465636844019_0.6109091571997851"
+  },
+  "_npmUser": {
+    "email": "piotr.rochala@gmail.com",
+    "name": "rochal"
+  },
+  "_npmVersion": "2.14.7",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "jquery-slimscroll",
+    "raw": "jquery-slimscroll@^1.3.8",
+    "rawSpec": "^1.3.8",
+    "scope": null,
+    "spec": ">=1.3.8 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/jquery-slimscroll/-/jquery-slimscroll-1.3.8.tgz",
+  "_shasum": "8481c44e7a47687653908a28f7f70aed64c84e36",
+  "_shrinkwrap": null,
+  "_spec": "jquery-slimscroll@^1.3.8",
+  "_where": "/data/atlassian/bamboo/xml-data/build-dir/VUFIND-PRODUCTION-JOB1/vufind-2.3.1",
+  "author": {
+    "name": "Piotr Rochala",
+    "url": "http://rocha.la/"
+  },
+  "bugs": {
+    "url": "https://github.com/rochal/jQuery-slimScroll/issues"
+  },
+  "dependencies": {
+    "jquery": ">= 1.7"
+  },
+  "description": "slimScroll is a small jQuery plugin that transforms any div into a scrollable area. slimScroll doesn't occupy any visual space as it only appears on a user initiated mouse-over.",
+  "devDependencies": {},
+  "dist": {
+    "integrity": "sha512-3cNGNCq6i3b+rZQOx1tSBlSFewk4X35eUuQmoRVSA4MSytw3rGPvCw6cEB2oEHf+u15RVzgfh4hN+/3dDNzwiQ==",
+    "shasum": "8481c44e7a47687653908a28f7f70aed64c84e36",
+    "signatures": [
+      {
+        "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+        "sig": "MEQCIFqOVJGUJ6bkcbvrAiTcPO3LWkHEFkwTBT6sPOVUHhXoAiBQ+dAGrdqp1YLTSaQICCJ0QZPWG3JjJDJ9c4jOXDdtdg=="
+      }
+    ],
+    "tarball": "https://registry.npmjs.org/jquery-slimscroll/-/jquery-slimscroll-1.3.8.tgz"
+  },
+  "gitHead": "cf39d364e777ef95574c30c42d3b85cb2bf325d3",
+  "homepage": "http://rocha.la/jQuery-slimScroll/",
+  "keywords": [
+    "ecosystem:jquery",
+    "jquery-plugin",
+    "scroll",
+    "scrollable",
+    "scrollbar",
+    "scroller",
+    "scrolling",
+    "slimscroll",
+    "ui"
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    },
+    {
+      "type": "GPL",
+      "url": "http://www.opensource.org/licenses/gpl-license.php"
+    }
+  ],
+  "main": "jquery.slimscroll.js",
+  "maintainers": [
+    {
+      "name": "rochal",
+      "email": "piotr.rochala@gmail.com"
+    }
+  ],
+  "name": "jquery-slimscroll",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rochal/jQuery-slimScroll.git"
+  },
+  "scripts": {},
+  "title": "jQuery slimScroll scrollbar",
+  "version": "1.3.8"
+}

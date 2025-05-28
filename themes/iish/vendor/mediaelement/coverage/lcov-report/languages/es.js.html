@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for languages/es.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">All files</a> / <a href="index.html">languages</a> es.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>1/1</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/1</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*!
+ * This is a i18n.locale language object.
+ *
+ * Spanish
+ *
+ * @author
+ *   Jalios (Twitter: @Jalios)
+ *   Sascha Greuel (Twitter: @SoftCreatR)
+ *   Rafael Miranda (GitHub: @ron666)
+ *
+ * @see
+ *   mediaelement-i18n.js
+ *
+ * @params
+ *  - exports - CommonJS, window ..
+ */
+export const ES = {
+	"mejs.plural-form": 1,
+&nbsp;
+	// me-shim
+	"mejs.download-file": "Descargar archivo",
+	"mejs.install-flash": "Esta usando un navegador que no tiene activado o instalado el reproductor de Flash. Por favor active el plugin del reproductor de Flash o descargue la versión más reciente en https://get.adobe.com/flashplayer/",
+&nbsp;
+	// mediaelementplayer-feature-contextmenu
+	"mejs.fullscreen-off": "Desconectar pantalla completa",
+	"mejs.fullscreen-on": "Ir a pantalla completa",
+	"mejs.download-video": "Descargar vídeo",
+&nbsp;
+	// mediaelementplayer-feature-fullscreen
+	"mejs.fullscreen": "Pantalla completa",
+&nbsp;
+	// mediaelementplayer-feature-jumpforward
+	"mejs.time-jump-forward": ["Adelantar 1 segundo", "Adelantar %1 segundos"],
+&nbsp;
+	// mediaelementplayer-feature-loop
+	"mejs.loop": "Alternar Repetición",
+&nbsp;
+	// mediaelementplayer-feature-playpause
+	"mejs.play": "Reproducción",
+	"mejs.pause": "Pausa",
+&nbsp;
+	// mediaelementplayer-feature-postroll
+	"mejs.close": "Cerrar",
+&nbsp;
+	// mediaelementplayer-feature-progress
+	"mejs.time-slider": "Control deslizante de tiempo",
+	"mejs.time-help-text": "Use las flechas Izquierda/Derecha para avanzar un segundo y las flechas Arriba/Abajo para avanzar diez segundos.",
+&nbsp;
+	// mediaelementplayer-feature-skipback
+	"mejs.time-skip-back": ["Rebobinar 1 segundo", "Rebobinar %1 segundos"],
+&nbsp;
+	// mediaelementplayer-feature-tracks
+	"mejs.captions-subtitles": "Leyendas/Subtítulos",
+	"mejs.none": "Ninguno",
+&nbsp;
+	// mediaelementplayer-feature-volume
+	"mejs.mute-toggle": "Alternar silencio",
+	"mejs.volume-help-text": "Use las flechas Arriba/Abajo para subir o bajar el volumen.",
+	"mejs.unmute": "Reactilet silencio",
+	"mejs.mute": "Silencio",
+	"mejs.volume-slider": "Control deslizante de volumen",
+&nbsp;
+	// mep-player
+	"mejs.video-player": "Reproductor de video",
+	"mejs.audio-player": "Reproductor de audio",
+&nbsp;
+	// mediaelementplayer-feature-ads
+	"mejs.ad-skip": "Saltar publicidad",
+	"mejs.ad-skip-info": ["Saltar 1 segundo", "Saltar %1 segundos"],
+&nbsp;
+	// mediaelementplayer-feature-sourcechooser
+	"mejs.source-chooser": "Selector de media",
+&nbsp;
+	// mediaelementplayer-feature-stop
+	"mejs.stop": "Parar",
+&nbsp;
+	//mediaelementplayer-feature-speed
+	"mejs.speed-rate": "Tasa de velocidad",
+&nbsp;
+	// mep-tracks
+	"mejs.afrikaans": "Afrikaans",
+	"mejs.albanian": "Albano",
+	"mejs.arabic": "Árabe",
+	"mejs.belarusian": "Bielorruso",
+	"mejs.bulgarian": "Búlgaro",
+	"mejs.catalan": "Catalán",
+	"mejs.chinese": "Chino",
+	"mejs.chinese-simplified": "Chino (Simplificado)",
+	"mejs.chinese-traditional": "Chino (Tradicional)",
+	"mejs.croatian": "Croata",
+	"mejs.czech": "Checo",
+	"mejs.danish": "Danés",
+	"mejs.dutch": "Holandés",
+	"mejs.english": "Inglés",
+	"mejs.estonian": "Estoniano",
+	"mejs.filipino": "Filipino",
+	"mejs.finnish": "Finlandés",
+	"mejs.french": "Francés",
+	"mejs.galician": "Gallego",
+	"mejs.german": "Alemán",
+	"mejs.greek": "Griego",
+	"mejs.haitian-creole": "Haitiano Criollo",
+	"mejs.hebrew": "Hebreo",
+	"mejs.hindi": "Hindi",
+	"mejs.hungarian": "Húngaro",
+	"mejs.icelandic": "Islandés",
+	"mejs.indonesian": "Indonesio",
+	"mejs.irish": "Irlandés",
+	"mejs.italian": "Italiano",
+	"mejs.japanese": "Japonés",
+	"mejs.korean": "Coreano",
+	"mejs.latvian": "Letón",
+	"mejs.lithuanian": "Lituano",
+	"mejs.macedonian": "Macedonio",
+	"mejs.malay": "Malayo",
+	"mejs.maltese": "Maltés",
+	"mejs.norwegian": "Noruego",
+	"mejs.persian": "Persa",
+	"mejs.polish": "Polaco",
+	"mejs.portuguese": "Portugués",
+	"mejs.romanian": "Rumano",
+	"mejs.russian": "Ruso",
+	"mejs.serbian": "Serbio",
+	"mejs.slovak": "Eslovaco",
+	"mejs.slovenian": "Eslovenio",
+	"mejs.spanish": "Español",
+	"mejs.swahili": "Swahili",
+	"mejs.swedish": "Suizo",
+	"mejs.tagalog": "Tagalog",
+	"mejs.thai": "Tailandés",
+	"mejs.turkish": "Turco",
+	"mejs.ukrainian": "Ucraniano",
+	"mejs.vietnamese": "Vietnamita",
+	"mejs.welsh": "Galés",
+	"mejs.yiddish": "Yiddish"
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Jan 05 2017 13:55:43 GMT-0500 (EST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

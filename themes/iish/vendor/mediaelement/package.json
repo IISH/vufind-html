@@ -1,0 +1,91 @@
+{
+  "_args": [
+    [
+      "mediaelement@^2.23.5",
+      "/data/atlassian/bamboo/xml-data/build-dir/VUFIND-PRODUCTION-JOB1/vufind-2.3.1"
+    ]
+  ],
+  "_from": "mediaelement@>=2.23.5 <3.0.0",
+  "_id": "mediaelement@2.23.5",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/mediaelement",
+  "_nodeVersion": "5.10.0",
+  "_npmOperationalInternal": {
+    "host": "packages-18-east.internal.npmjs.com",
+    "tmp": "tmp/mediaelement-2.23.5.tgz_1483704226219_0.3031692716758698"
+  },
+  "_npmUser": {
+    "email": "rafa8626@gmail.com",
+    "name": "rafa8626"
+  },
+  "_npmVersion": "3.8.5",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "mediaelement",
+    "raw": "mediaelement@^2.23.5",
+    "rawSpec": "^2.23.5",
+    "scope": null,
+    "spec": ">=2.23.5 <3.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/mediaelement/-/mediaelement-2.23.5.tgz",
+  "_shasum": "f29c119bdf074421959719a385a214cabd285c9f",
+  "_shrinkwrap": null,
+  "_spec": "mediaelement@^2.23.5",
+  "_where": "/data/atlassian/bamboo/xml-data/build-dir/VUFIND-PRODUCTION-JOB1/vufind-2.3.1",
+  "bugs": {
+    "url": "https://github.com/johndyer/mediaelement/issues"
+  },
+  "dependencies": {},
+  "description": "One file. Any browser. Same UI.",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-cssmin": "~0.6.1",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-remove-logging": "~0.2.0",
+    "grunt-shell": "~1.1.1",
+    "grunt-text-replace": "~0.3.12"
+  },
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-TNGG04MQSYLLM/RKyl4BCWAhNeMizt6U87BJw7j93pkDQNNB6h43EuAXP6MCxu+y70FtHBL8aG3FzDDXGcLBvQ==",
+    "shasum": "f29c119bdf074421959719a385a214cabd285c9f",
+    "signatures": [
+      {
+        "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+        "sig": "MEUCIArBMARmwfHcoiQz1UDz322HzVM1oJGYZFio5xjO5Jv+AiEAqneiN0ForE+kQ4Fp2Pws0qAgQsUnYtu8a3sNRGEsPyY="
+      }
+    ],
+    "tarball": "https://registry.npmjs.org/mediaelement/-/mediaelement-2.23.5.tgz"
+  },
+  "gitHead": "e67d5efea9c6760ac6e1cd031ebc4101bbc027cf",
+  "homepage": "https://github.com/johndyer/mediaelement#readme",
+  "license": "MIT",
+  "main": "build/mediaelement.js",
+  "maintainers": [
+    {
+      "name": "johndyer",
+      "email": "johndyer@gmail.com"
+    },
+    {
+      "name": "rafa8626",
+      "email": "rafa8626@gmail.com"
+    }
+  ],
+  "name": "mediaelement",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johndyer/mediaelement.git"
+  },
+  "scripts": {},
+  "version": "2.23.5"
+}

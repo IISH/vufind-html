@@ -1,0 +1,14 @@
+<? $this->headTitle($this->translate('Databases')); ?>
+
+<h2><?= $this->transEsc('Databases') ?></h2>
+
+<? if ($this->layout()->userLang === 'nl'): ?>
+  <p>Een uitgebreide lijst van databases en datawebsite is te vinden op de
+    website: <a
+        href="https://iisg.amsterdam/nl/data/datasets" target="_blank">iisg.amsterdam/nl/data/datasets</a>.
+  </p>
+<? else: ?>
+  <p>An extensive list of databases and datawebsites can be found at <a
+        href="https://iisg.amsterdam/en/data/datasets" target="_blank">iisg.amsterdam/en/data/datasets</a>.
+  </p>
+<? endif ?>
