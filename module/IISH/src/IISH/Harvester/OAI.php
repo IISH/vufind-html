@@ -188,7 +188,7 @@ class OAI extends VuFindOAI
         $delete_by_id = "wget -O /dev/null \"http://localhost:8080/solr/biblio/update?stream.body=<delete><id>" . $id . "</id></delete>\"";
         echo shell_exec($delete_by_id);
 
-        $delete_fulltext = "wget -O /dev/null \"http://localhost:8080/solr/fulltext/update?stream.body=<delete><query>record:" . $id . "</query></delete>\"";
+        $delete_fulltext = 'wget -O /dev/null http://localhost:8080/solr/fulltext/update?stream.body=<delete><query>record:"' . $id . '"</query></delete>';
         echo shell_exec($delete_fulltext);
     }
 
