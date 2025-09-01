@@ -457,6 +457,12 @@ public Set getAuthorityFacets(Record record) {
 }
 
 public String hack(Record record) {
+
+    id = getId(record);
+    if (id[0] == 'Z') {
+        throw Exception("Marc records with an identifier Z* will not be indexed.");
+    }
+
     final Set result = new LinkedHashSet();
     final List fields = record.getVariableFields("655");
     if (fields != null) {
@@ -471,8 +477,6 @@ public String hack(Record record) {
                     final String data = subfield.getData().toLowerCase().trim();
                     if (data.equals("archives format") || data.equals("archives format."))
                         throw Exception("Marc records with 655$a='Archives format.' will not be indexed.");
-                    if (data.equals("serials"))
-                        throw Exception("Marc records with 655$a='Serials' will not be indexed.");
                 }
             }
         }
