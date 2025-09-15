@@ -459,7 +459,7 @@ public Set getAuthorityFacets(Record record) {
 public String hack(Record record) {
 
     id = getId(record);
-    if (id[0] == 'Z') {
+    if (id.charAt(0) == 'Z') {
         throw Exception("Marc records with an identifier Z* will not be indexed.");
     }
 
@@ -481,7 +481,7 @@ public String hack(Record record) {
             }
         }
     }
-    
+
     return null;
 }
 
@@ -492,7 +492,7 @@ public String downloadableBiblio(Record record ){
         final Iterator fieldsIter = fields.iterator();
         while (fieldsIter.hasNext()) {
             final DataField physical = (DataField) fieldsIter.next();
-            
+
             final String q = subfieldQ(physical);
             if (q != null)
                 return "true";
@@ -506,7 +506,7 @@ public String downloadableBiblio(Record record ){
     final Set barcodes = barcodesHaveManifest(record);
     if (!barcodes.isEmpty())
         return "true";
-    
+
     return "false";
 }
 
@@ -589,12 +589,12 @@ private String subfieldQ(DataField datafield) {
                 final Subfield subfield = subfield( subfieldsIter.next() );
                 final String data = subfield.getData();
                 final int i = data.indexOf("/");
-                if ( i != 0 ) 
+                if ( i != 0 )
                     return data.substring(0, 1).toUpperCase() + data.substring(1, i);
             }
         }
     }
-    
+
     return null;
 }
 
@@ -606,16 +606,16 @@ private String subfieldU(DataField datafield) {
             while (subfieldsIter.hasNext()) {
                 final Subfield subfield = subfield( subfieldsIter.next());
                 final String data = subfield.getData();
-                
+
                 if (data.contains("10622/N30051"))
                     return "Image";
-                    
+
                 if (data.startsWith("https://hdl.handle.net/10622/"))
                     return "Image";
             }
         }
     }
-    
+
     return null;
 }
 
