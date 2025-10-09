@@ -35,9 +35,10 @@
   </div>
 </div>
 
+<? if (isset($this->transEsc("MOTD"))): ?>
 <div id="messageOfTheDay">
-  <p class="lead <?=$this->layout()->userLang?>"><?= $this->messageOfTheDay['title'] ?></p>
-  <p><?= $this->messageOfTheDay['content'] ?></p>
+  <!-- <p class="lead <?=$this->layout()->userLang?>"><?= $this->messageOfTheDay['title'] ?></p> -->
+  <p><?= $this->transEsc("MOTD") ?></p>
 </div>
 
 <?
