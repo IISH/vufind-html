@@ -35,10 +35,11 @@
   </div>
 </div>
 
+<? if ($this->transEsc("MOTD") != null) : ?>
 <div id="messageOfTheDay">
-  <p class="lead <?=$this->layout()->userLang?>"><?= $this->messageOfTheDay['title'] ?></p>
-  <p><?= $this->messageOfTheDay['content'] ?></p>
+  <p><?= $this->transEsc("MOTD") ?></p>
 </div>
+<? endif; ?>
 
 <?
 $facetList = is_object($this->results) ? $this->results->getFacetList() : array();
