@@ -35,6 +35,7 @@
                 ?>
                 <? if (count($in_list) !== 0): ?><br/><?=$this->transEsc('unavailable_because_of_digitization')?><? else: ?>
 <!-- https://jira.socialhistoryservices.org/browse/DELIVERYM-54 -->
+<!--
           <div class="state hidden-print"
                data-label="<?=$this->escapeHtmlAttr($this->truncate(preg_replace('/[\'"]/', '`',
                  $this->driver->getShortTitle()), 40))?> - <?=$this->escapeHtmlAttr($holding['j'])?>"
@@ -44,6 +45,7 @@
                data-show-reproduction="<?=var_export(($format !== 'articles') && ($format !== 'other'))?>"
                data-show-permission="false">
           </div>
+-->
       <? endif; ?>
 
         </div>
