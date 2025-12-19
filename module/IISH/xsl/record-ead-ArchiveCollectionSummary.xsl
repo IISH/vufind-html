@@ -143,7 +143,9 @@
                 </xsl:choose>
               </xsl:attribute>
 
-              <xsl:attribute name="data-show-reproduction">true</xsl:attribute>
+              <!-- https://jira.socialhistoryservices.org/browse/DELIVERYM-54 -->
+              <!-- <xsl:attribute name="data-show-reproduction">true</xsl:attribute> -->
+              <xsl:attribute name="data-show-reproduction">false</xsl:attribute>
 
               <xsl:variable name="access-restrict" select="ead:archdesc//ead:accessrestrict"/>
               <xsl:variable name="top-access" select="normalize-space($access-restrict/ead:p[1]/text())"/>
