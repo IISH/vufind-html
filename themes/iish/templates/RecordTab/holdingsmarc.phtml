@@ -41,7 +41,7 @@
                  $this->driver->getShortTitle()), 40))?> - <?=$this->escapeHtmlAttr($holding['j'])?>"
                data-pid="<?=$this->escapeHtmlAttr($this->driver->getIsShownAt())?>"
                data-signature="<?=$this->escapeHtmlAttr($holding['j'])?>"
-               data-show-reservation="<?=var_export($reservationFormats || $reservationHoldings)?>"
+               data-show-reservation="<?=var_export($reservationFormats) || var_export($reservationHoldings)?>"
                data-show-reproduction="false"
                data-show-permission="false">
           </div>
